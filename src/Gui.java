@@ -32,7 +32,7 @@ public class Gui extends JPanel {
         Panel2.setBackground(Color.blue);
 
 
-        tabs.addTab("One", Panel1);
+        tabs.addTab("One", new fill_Blanks_Tab());
         tabs.addTab("Two", Panel2);
 
 
