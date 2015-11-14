@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 
 public class fill_Blanks_Tab  extends JPanel
 {
+    int press_Cnt = 0;
     public static void main(String[] args)
     {
         JFrame frame = new JFrame("Fill Blanks");
@@ -72,13 +73,25 @@ public class fill_Blanks_Tab  extends JPanel
         Blank_panel.setPreferredSize(new Dimension(0,200));
         Blank_panel.setBorder(BorderFactory.createTitledBorder("Choice"));
         Blank_panel.setLayout(new MigLayout("debug", "[] [] ","[] [] [] []"));
-        //Blank_panel.setLayout(null);
+
+        Blank_panel.add(Blanks_Choice_0, "cell 0 0, sg 1,split 2");
+        Blank_panel.add(Choice_0_correct, "cell 1 0,pushx,growx,wrap");
+        Blank_panel.add(Blanks_Choice_1, "cell 0 2, sg 1,split 2");
+        Blank_panel.add(Choice_1_correct, "cell 1 2,pushx,growx,wrap");
+        Blank_panel.add(Blanks_Choice_2, "cell 0 3, sg 1,split 2");
+        Blank_panel.add(Choice_2_correct, "cell 0 3,pushx,growx,wrap");
+        Blank_panel.add(Blanks_Choice_3, "cell 0 4, sg 1,split 2");
+        Blank_panel.add(Choice_3_correct, "cell 1 4,pushx,growx,wrap");
+        Blanks_Choice_0.setVisible(false);
+        Choice_0_correct.setVisible(false);
+        Blanks_Choice_1.setVisible(false);
+        Choice_1_correct.setVisible(false);
+        Blanks_Choice_2.setVisible(false);
+        Choice_2_correct.setVisible(false);
+        Blanks_Choice_3.setVisible(false);
+        Choice_3_correct.setVisible(false);
+
         add(Blank_panel,"pushx,growx,wrap");
-//        Blank_panel.add(Question_Title, "left, sg 1,split 2");
-//        Blank_panel.add(Question_Title_Text, "pushx,growx,wrap");
-
-        //add(Blanks_Text, "pushx,growx,wrap");
-
         add(Remove_Blank, "right,sg 1,split 2");
         add(Add_Blank);
 
@@ -97,6 +110,31 @@ public class fill_Blanks_Tab  extends JPanel
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                if(press_Cnt == 0) {
+                    Blanks_Choice_0.setVisible(false);
+                    Choice_0_correct.setVisible(false);
+                   // press_Cnt--;
+                }else if(press_Cnt == 1)
+                {
+                    Blanks_Choice_1.setVisible(false);
+                    Choice_1_correct.setVisible(false);
+                    press_Cnt--;
+                    Blank_panel.repaint();
+                }else if(press_Cnt == 2)
+                {
+                    Blanks_Choice_2.setVisible(false);
+                    Choice_2_correct.setVisible(false);
+                    press_Cnt--;
+                    Blank_panel.repaint();
+                }else if(press_Cnt == 3)
+                {
+                    Blanks_Choice_3.setVisible(false);
+                    Choice_3_correct.setVisible(false);
+                    press_Cnt--;
+                    Blank_panel.repaint();
+                }
+
+
             }
         });
         Add_Blank.addActionListener(new ActionListener()
@@ -104,41 +142,42 @@ public class fill_Blanks_Tab  extends JPanel
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                int press_Cnt = 0;
+
                 if(press_Cnt == 0) {
-                    Blank_panel.add(Blanks_Choice_0, "cell 0 0, sg 1,split 2");
-                    Blank_panel.add(Choice_0_correct, "cell 1 0,pushx,growx,wrap");
+//                    Blank_panel.add(Blanks_Choice_0, "cell 0 0, sg 1,split 2");
+//                    Blank_panel.add(Choice_0_correct, "cell 1 0,pushx,growx,wrap");
+                    Blanks_Choice_0.setVisible(true);
+                    Choice_0_correct.setVisible(true);
                     press_Cnt++;
-                    setVisible(true);
                 }else if(press_Cnt == 1)
                 {
-                    Blank_panel.add(Blanks_Choice_1, "cell 1 2, sg 1,split 2");
-                    Blank_panel.add(Choice_1_correct, "cell 1 2,pushx,growx,wrap");
+//                    Blank_panel.add(Blanks_Choice_1, "cell 1 2, sg 1,split 2");
+//                    Blank_panel.add(Choice_1_correct, "cell 1 2,pushx,growx,wrap");
+                    Blanks_Choice_0.setVisible(true);
+                    Choice_0_correct.setVisible(true);
                     press_Cnt++;
                     Blank_panel.repaint();
                 }else if(press_Cnt == 2)
                 {
-                    Blank_panel.add(Blanks_Choice_2, "cell 0 3, sg 1,split 2");
-                    Blank_panel.add(Choice_2_correct, "cell 0 3,pushx,growx,wrap");
+//                    Blank_panel.add(Blanks_Choice_2, "cell 0 3, sg 1,split 2");
+//                    Blank_panel.add(Choice_2_correct, "cell 0 3,pushx,growx,wrap");
+                    Blanks_Choice_0.setVisible(true);
+                    Choice_0_correct.setVisible(true);
                     press_Cnt++;
                     Blank_panel.repaint();
                 }else if(press_Cnt == 3)
                 {
-                    Blank_panel.add(Blanks_Choice_3, "cell 0 4, sg 1,split 2");
-                    Blank_panel.add(Choice_3_correct, "cell 1 4,pushx,growx,wrap");
-                    press_Cnt++;
+//                    Blank_panel.add(Blanks_Choice_3, "cell 0 4, sg 1,split 2");
+//                    Blank_panel.add(Choice_3_correct, "cell 1 4,pushx,growx,wrap");
+                    Blanks_Choice_0.setVisible(true);
+                    Choice_0_correct.setVisible(true);
+                    //press_Cnt++;
                     Blank_panel.repaint();
                 }
 
             }
         });
-//        Choice_0_correct.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e)
-//            {
-//                Choice_0_correct
-//            }
-//        });
+
         Clear_Question_Text.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
