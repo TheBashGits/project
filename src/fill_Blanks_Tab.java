@@ -29,7 +29,7 @@ public class fill_Blanks_Tab  extends JPanel
         setLayout(null);
         setBorder(BorderFactory.createTitledBorder("Fill Blanks"));
 
-        setLayout(new MigLayout("debug", "[]10[] ","[] [] []"));
+        setLayout(new MigLayout("debug", "[]10[] ","[] [] [] [] [] []"));
 
         /* Label definitions*/
         JLabel Question_Title = new JLabel("Queston title:");
@@ -54,12 +54,11 @@ public class fill_Blanks_Tab  extends JPanel
 
 
         /*panel additions*/
-        Question_Title.setBounds(500,400,80,80);
         add(Question_Title, "left, sg 1,split 2");
         add(Question_Title_Text, "pushx,growx,wrap");
 
         add(Question_Start, "left, sg 1,split 2");
-        add(Question_Start_Text, "span 2 2");
+        add(Question_Start_Text, "pushx,growx,wrap");
 
         add(Blanks, "left,sg 1,split 2");
         add(Blanks_Text, "pushx,growx,wrap");
@@ -67,7 +66,7 @@ public class fill_Blanks_Tab  extends JPanel
         add(Add_Blank, "span");
 
 
-        add(Question_End, "left,sg 1,split 2");
+        add(Question_End, "right,sg 1,split 2");
         add(Question_End_Text, "pushx,growx,wrap");
         //panel.add(Clear_Question_Text);
         // panel.add(Create_Gift_Code);
