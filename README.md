@@ -1,3 +1,3 @@
 # project
-GIU Project
+GUI Project
 Gift Editor Project for Software Engineering
