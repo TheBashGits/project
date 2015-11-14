@@ -25,7 +25,7 @@ public class fill_Blanks_Tab  extends JPanel
     {
         /*Fill_Blanks panel creation*/
        //JPanel panel = new JPanel();
-        setPreferredSize(new Dimension(800,600));
+      //  setPreferredSize(new Dimension(800,600));
         setLayout(null);
         setBorder(BorderFactory.createTitledBorder("Fill Blanks"));
 
@@ -54,7 +54,7 @@ public class fill_Blanks_Tab  extends JPanel
 
 
         /*panel additions*/
-        Question_Title.setBounds(500,400,80,80);
+       // Question_Title.setBounds(500,400,80,80);
         add(Question_Title, "left, sg 1,split 2");
         add(Question_Title_Text, "pushx,growx,wrap");
 

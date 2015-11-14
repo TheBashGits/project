@@ -1,3 +1,5 @@
+import net.miginfocom.swing.MigLayout;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -17,18 +19,22 @@ public class Gui extends JPanel {
 
     public Gui() {
         //construct components
+      // setPreferredSize (new Dimension (800, 600));
+      //  setLayout (null);
         JTabbedPane tabs = new JTabbedPane();
 
+        setLayout(new MigLayout("wrap 1"));
 
-        //construct preComponents
+        //construct preComponents of File menu
         JMenu fileMenu = new JMenu ("File");
-        JMenuItem q1 = new JMenuItem ("Print");
-        JMenuItem q2 = new JMenuItem ("Print");
-        JMenuItem q3 = new JMenuItem ("Print");
-        JMenuItem q4 = new JMenuItem ("Print");
-        JMenuItem q5 = new JMenuItem ("Print");
-        JMenuItem q6 = new JMenuItem ("Print");
-        JMenuItem q7 = new JMenuItem ("Print");
+        JMenuItem q1 = new JMenuItem (essay);
+        JMenuItem q2 = new JMenuItem (truefalse);
+        JMenuItem q3 = new JMenuItem (mcb);
+        JMenuItem q4 = new JMenuItem (mca);
+        JMenuItem q5 = new JMenuItem (numerical);
+        JMenuItem q6 = new JMenuItem (matching);
+        JMenuItem q7 = new JMenuItem (fillblanks);
+        //Adding components into File Menu
         fileMenu.add (q1);
         fileMenu.add (q2);
         fileMenu.add (q3);
@@ -37,19 +43,37 @@ public class Gui extends JPanel {
         fileMenu.add (q6);
         fileMenu.add (q7);
 
+        //Creating Tabs for files
+        JPanel Tab1 = new JPanel();
+        JPanel Tab2 = new JPanel();
+        JPanel Tab3 = new JPanel();
+        JPanel Tab4 = new JPanel();
+        JPanel Tab5 = new JPanel();
+        JPanel Tab6 = new JPanel();
+        JPanel Tab7 = new JPanel();
+        //Setting test collors code
+        Tab1.setBackground(Color.black);
+        Tab2.setBackground(Color.blue);
+        Tab3.setBackground(Color.yellow);
+        Tab4.setBackground(Color.CYAN);
+        Tab5.setBackground(Color.red);
+        Tab6.setBackground(Color.green);
+        Tab7.setBackground(Color.pink);
 
 
-        JPanel Panel1 = new JPanel();
-        JPanel Panel2 = new JPanel();
-        Panel1.setBounds(50, 50, 50, 50);
-        Panel2.setBounds(100, 100, 100, 100);
+     //   tabs.addTab(essay, new fill_Blanks_Tab());
+        tabs.addTab(essay, Tab1);
+        tabs.addTab(truefalse, Tab2);
+        tabs.addTab(mcb, Tab3);
+        tabs.addTab(mca, Tab4);
+        tabs.addTab(numerical, Tab5);
+        tabs.addTab(matching, Tab6);
+        tabs.addTab(fillblanks, Tab7);
 
-        Panel1.setBackground(Color.black);
-        Panel2.setBackground(Color.blue);
 
 
-        tabs.addTab("One", new fill_Blanks_Tab());
-        tabs.addTab("Two", Panel2);
+
+
 
 
         //construct components
@@ -57,27 +81,28 @@ public class Gui extends JPanel {
         jcomp1.add(fileMenu);
      //   jcomp1.add(helpMenu);
 
-        jcomp1.setBounds(0, 0, 800, 20);
-        tabs.setBounds(0, 20, 800, 600);
+     //   jcomp1.setBounds(0, 0, 800, 20);
+     //   tabs.setBounds(0, 20, 800, 600);
 
-        add(jcomp1);
-        add(new fill_Blanks_Tab());
-        add(tabs);
+        add(jcomp1,"wrap, span");
+        //add(new fill_Blanks_Tab(),"");
+        add(tabs,"span, wrap,");
 
         //   add(Panel1);
         //   add (Panel2);
 
         //adjust size and set layout
-        setPreferredSize (new Dimension (800, 600));
-        setLayout (null);
+
 
         //set component bounds (only needed by Absolute Positioning)
     }
 
 
     public static void main (String[] args) {
+
         JFrame frame = new JFrame ("MyPanel");
-        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new MigLayout());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add (new Gui());
         frame.pack();
         frame.setVisible (true);
