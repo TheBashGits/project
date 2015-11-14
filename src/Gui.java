@@ -19,6 +19,7 @@ public class Gui extends JPanel {
         //construct components
         JTabbedPane tabs = new JTabbedPane();
 
+
         //construct preComponents
         JMenu fileMenu = new JMenu ("File");
         JMenuItem q1 = new JMenuItem ("Print");
