@@ -62,31 +62,7 @@ public class Essays  extends JPanel
         add(giftOutput, "top,sg 1,split 2");
         add(giftOutputText, "pushx,growx,growy,pushy,wrap");
         add(Clear_Gift_List, "right,sg 2, wrap ");
-        /*add(Remove_Blank, "right,sg 1,split 2");
-        add(Add_Blank, "span");
 
-
-        add(Question_End, "left,sg 1,split 2");
-        add(Question_End_Text, "pushx,growx,wrap");
-        panel.add(Clear_Question_Text);
-        panel.add(Create_Gift_Code);
-
-        add(Gift_Output, "left, sg 1,split 2");
-        add(Gift_Output_Text, "pushx,growx,wrap");
-*/
-        /*Creation of the button action listeners*/
-       /* Remove_Blank.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        Add_Blank.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });*/
         Clear_Question_Text.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
