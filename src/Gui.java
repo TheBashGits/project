@@ -33,7 +33,7 @@ public class Gui extends JPanel {
 
 
         tabs.addTab("One", new fill_Blanks_Tab());
-        tabs.addTab("Two", new Essays());
+        tabs.addTab("Essay", new Essays());
 
 
         //construct components
