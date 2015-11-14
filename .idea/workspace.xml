@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab339c2c-3d1b-48cf-98f5-d2fb1994fecd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Tabbed_Gui.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Tabs.java" />
-      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\out\production\Gui\Gui$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\out\production\Gui\Gui$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\out\production\Gui\Gui$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\out\production\Gui\Gui$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\out\production\Gui\Gui$5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\src\fill_Blanks_Tab.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\out\production\Gui\Tabbed_Gui.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\out\production\Gui\Tabs.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\src\Tabbed_Gui.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Buckup USB 2015\Year 5\Software_Engineering\Project\src\Tabs.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Gui/Gui.class" afterPath="$PROJECT_DIR$/out/production/Gui/Gui.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gui.java" afterPath="$PROJECT_DIR$/src/Gui.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -38,34 +34,9 @@
       <file leaf-file-name="Gui.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72494173">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4755245">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tabs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tabs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tabbed_Gui.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tabbed_Gui.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#1338#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -493,12 +464,12 @@
       <created>1447498404260</created>
       <option name="number" value="Default" />
       <updated>1447498404260</updated>
-      <workItem from="1447498407393" duration="13374000" />
+      <workItem from="1447498407393" duration="13682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13374000" />
+    <option name="totallyTimeSpent" value="13682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -515,7 +486,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28144655" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13250366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3213763" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -550,31 +521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tabs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tabbed_Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1338#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Gui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72494173">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4755245">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
