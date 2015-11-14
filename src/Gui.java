@@ -44,7 +44,7 @@ public class Gui extends JPanel {
         jcomp1.setBounds(0, 0, 800, 20);
         tabs.setBounds(0, 20, 800, 600);
 
-        add(jcomp1);
+        add(new fill_Blanks_Tab());
         add(tabs);
 
         //   add(Panel1);
