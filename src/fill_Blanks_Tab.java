@@ -29,19 +29,27 @@ public class fill_Blanks_Tab  extends JPanel
         setLayout(null);
         setBorder(BorderFactory.createTitledBorder("Fill Blanks"));
 
-        setLayout(new MigLayout("debug", "[]10[] ","[] [] [] [] [] []"));
+        setLayout(new MigLayout("debug", "[]10[] ","[] [] [] [] [] [] [] [] []"));
 
         /* Label definitions*/
         JLabel Question_Title = new JLabel("Queston title:");
         JLabel Question_Start = new JLabel("Queston start:");
         JLabel Blanks = new JLabel("Blanks:");
+        JPanel Blank_panel = new JPanel();
         JLabel Question_End = new JLabel("Queston End:");
         JLabel Gift_Output = new JLabel("Gift Output:");
 
         /*panel component creation*/
         JTextField Question_Title_Text = new JTextField(20);
         JTextField Question_Start_Text = new JTextField(20);
-        JTextField Blanks_Text = new JTextField(20);
+        JTextField Blanks_Choice_0 = new JTextField(20);
+        JTextField Blanks_Choice_1 = new JTextField(20);
+        JTextField Blanks_Choice_2 = new JTextField(20);
+        JTextField Blanks_Choice_3 = new JTextField(20);
+        JRadioButton Choice_0_correct = new JRadioButton("Correct");
+        JRadioButton Choice_1_correct = new JRadioButton("Correct");
+        JRadioButton Choice_2_correct = new JRadioButton("Correct");
+        JRadioButton Choice_3_correct = new JRadioButton("Correct");
         JButton Remove_Blank = new JButton("Remove Blank");
         JButton Add_Blank = new JButton("Add Blank");
         JButton Clear_Question_Text = new JButton("Clear Question");
@@ -61,17 +69,27 @@ public class fill_Blanks_Tab  extends JPanel
         add(Question_Start_Text, "pushx,growx,wrap");
 
         add(Blanks, "left,sg 1,split 2");
-        add(Blanks_Text, "pushx,growx,wrap");
+        Blank_panel.setPreferredSize(new Dimension(0,200));
+        Blank_panel.setBorder(BorderFactory.createTitledBorder("Choice"));
+        Blank_panel.setLayout(new MigLayout("debug", "[] [] ","[] [] [] []"));
+        //Blank_panel.setLayout(null);
+        add(Blank_panel,"pushx,growx,wrap");
+//        Blank_panel.add(Question_Title, "left, sg 1,split 2");
+//        Blank_panel.add(Question_Title_Text, "pushx,growx,wrap");
+
+        //add(Blanks_Text, "pushx,growx,wrap");
+
         add(Remove_Blank, "right,sg 1,split 2");
-        add(Add_Blank, "span");
+        add(Add_Blank);
 
 
-        add(Question_End, "right,sg 1,split 2");
+        add(Question_End, "cell 0 4,sg 1,split 2");
         add(Question_End_Text, "pushx,growx,wrap");
-        //panel.add(Clear_Question_Text);
-        // panel.add(Create_Gift_Code);
 
-        add(Gift_Output, "left, sg 1,split 2");
+        add(Clear_Question_Text,"right,sg 1,wrap");
+        add(Create_Gift_Code,"right,sg 1");
+
+        add(Gift_Output, "cell 0 8, sg 1,split 2");
         add(Gift_Output_Text, "pushx,growx,wrap");
 
         /*Creation of the button action listeners*/
@@ -81,12 +99,46 @@ public class fill_Blanks_Tab  extends JPanel
 
             }
         });
-        Add_Blank.addActionListener(new ActionListener() {
+        Add_Blank.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
+                int press_Cnt = 0;
+                if(press_Cnt == 0) {
+                    Blank_panel.add(Blanks_Choice_0, "cell 0 0, sg 1,split 2");
+                    Blank_panel.add(Choice_0_correct, "cell 1 0,pushx,growx,wrap");
+                    press_Cnt++;
+                    setVisible(true);
+                }else if(press_Cnt == 1)
+                {
+                    Blank_panel.add(Blanks_Choice_1, "cell 1 2, sg 1,split 2");
+                    Blank_panel.add(Choice_1_correct, "cell 1 2,pushx,growx,wrap");
+                    press_Cnt++;
+                    Blank_panel.repaint();
+                }else if(press_Cnt == 2)
+                {
+                    Blank_panel.add(Blanks_Choice_2, "cell 0 3, sg 1,split 2");
+                    Blank_panel.add(Choice_2_correct, "cell 0 3,pushx,growx,wrap");
+                    press_Cnt++;
+                    Blank_panel.repaint();
+                }else if(press_Cnt == 3)
+                {
+                    Blank_panel.add(Blanks_Choice_3, "cell 0 4, sg 1,split 2");
+                    Blank_panel.add(Choice_3_correct, "cell 1 4,pushx,growx,wrap");
+                    press_Cnt++;
+                    Blank_panel.repaint();
+                }
 
             }
         });
+//        Choice_0_correct.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e)
+//            {
+//                Choice_0_correct
+//            }
+//        });
         Clear_Question_Text.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
