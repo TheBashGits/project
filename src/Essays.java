@@ -37,9 +37,9 @@ public class Essays  extends JPanel
         JLabel giftOutput = new JLabel("Gift Output:");         //label bottom feft
 
         /*panel component creation*/
-        JTextField questionTitleText = new JTextField(20);
-        JTextField questionText = new JTextField(20);
-        JTextField giftOutputText = new JTextField(20);
+        JTextArea questionTitleText = new JTextArea(5,20);
+        JTextArea questionText = new JTextArea(5,20);
+        JTextArea giftOutputText = new JTextArea(5,20);
 
         JButton Clear_Question_Text = new JButton("Clear Question Text");   //button middle right
         JButton Create_Gift_Code = new JButton("Create Gift Code");        //button 2nd middle right
