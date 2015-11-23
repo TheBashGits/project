@@ -29,7 +29,7 @@ public class Essays  extends JPanel
         setLayout(null);
         setBorder(BorderFactory.createTitledBorder("Essay"));
 
-        setLayout(new MigLayout("debug","[]10[] ","[] [] [] []"));
+        setLayout(new MigLayout("","[]10[] ","[] [] [] []"));
 
         /* Label definitions*/
         JLabel questionTitle = new JLabel("Queston title:");    //label top left
