@@ -67,18 +67,29 @@ public class Essays  extends JPanel
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                questionText.setText("");
+
+
             }
         });
         Create_Gift_Code.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                String title = questionTitleText.getText();
+                String question = questionText.getText();
+                String gift = "::"+title+"::"+question+"{}\n";
+                giftOutputText.append(gift);
             }
         });
+
+
+
+
+
         Clear_Gift_List.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                giftOutputText.setText("");
             }
         });
 
