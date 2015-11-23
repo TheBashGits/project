@@ -1,6 +1,8 @@
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
+import javax.swing.event.MenuKeyEvent;
+import javax.swing.event.MenuKeyListener;
 import java.awt.*;
 
 
@@ -19,11 +21,11 @@ public class Gui extends JPanel {
 
     public Gui() {
         //construct components
-      // setPreferredSize (new Dimension (800, 600));
+       setPreferredSize (new Dimension (2000, 2000));
       //  setLayout (null);
         JTabbedPane tabs = new JTabbedPane();
 
-        setLayout(new MigLayout("wrap 1"));
+        setLayout(new MigLayout());
 
         //construct preComponents of File menu
         JMenu fileMenu = new JMenu ("File");
@@ -34,6 +36,25 @@ public class Gui extends JPanel {
         JMenuItem q5 = new JMenuItem (numerical);
         JMenuItem q6 = new JMenuItem (matching);
         JMenuItem q7 = new JMenuItem (fillblanks);
+
+
+        q1.addMenuKeyListener(new MenuKeyListener() {
+            @Override
+            public void menuKeyTyped(MenuKeyEvent e) {
+
+            }
+
+            @Override
+            public void menuKeyPressed(MenuKeyEvent e) {
+
+            }
+
+            @Override
+            public void menuKeyReleased(MenuKeyEvent e) {
+
+            }
+        });
+
         //Adding components into File Menu
         fileMenu.add (q1);
         fileMenu.add (q2);
@@ -70,31 +91,12 @@ public class Gui extends JPanel {
         tabs.addTab(matching, Tab6);
         tabs.addTab(fillblanks, Tab7);
 
-
-
-
-
-
-
         //construct components
         jcomp1 = new JMenuBar();
         jcomp1.add(fileMenu);
-     //   jcomp1.add(helpMenu);
 
-     //   jcomp1.setBounds(0, 0, 800, 20);
-     //   tabs.setBounds(0, 20, 800, 600);
-
-        add(jcomp1,"wrap, span");
-        //add(new fill_Blanks_Tab(),"");
-        add(tabs,"span, wrap,");
-
-        //   add(Panel1);
-        //   add (Panel2);
-
-        //adjust size and set layout
-
-
-        //set component bounds (only needed by Absolute Positioning)
+        add(jcomp1," grow,wrap");
+        add(tabs,"grow,push");
     }
 
 
@@ -103,7 +105,8 @@ public class Gui extends JPanel {
         JFrame frame = new JFrame ("MyPanel");
         frame.setLayout(new MigLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add (new Gui());
+        frame.getContentPane().add(new Gui(), "span");
+        frame.setPreferredSize(new Dimension(800,700));
         frame.pack();
         frame.setVisible (true);
     }
