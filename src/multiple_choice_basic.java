@@ -59,20 +59,20 @@ public class multiple_choice_basic  extends JPanel
         JTextArea Question_Title_Text = new JTextArea(2,20);
         JTextArea Question_Text = new JTextArea(8,20);
 
-        JTextArea Question_0 = new JTextArea();
-        JTextArea Answer_0 = new JTextArea();
-        JTextArea Question_1 = new JTextArea();
-        JTextArea Answer_1 = new JTextArea();
-        JTextArea Question_2 = new JTextArea();
-        JTextArea Answer_2 = new JTextArea();
-        JTextArea Question_3 = new JTextArea();
-        JTextArea Answer_3 = new JTextArea();
-        JTextArea Question_4 = new JTextArea();
-        JTextArea Answer_4 = new JTextArea();
-        JTextArea Question_5 = new JTextArea();
-        JTextArea Answer_5 = new JTextArea();
-        JTextArea Question_6 = new JTextArea();
-        JTextArea Answer_6 = new JTextArea();
+        JTextField Question_0 = new JTextField(20);
+        JTextField Answer_0 = new JTextField(20);
+        JTextField Question_1 = new JTextField(20);
+        JTextField Answer_1 = new JTextField(20);
+        JTextField Question_2 = new JTextField(20);
+        JTextField Answer_2 = new JTextField(20);
+        JTextField Question_3 = new JTextField(20);
+        JTextField Answer_3 = new JTextField(20);
+        JTextField Question_4 = new JTextField(20);
+        JTextField Answer_4 = new JTextField(20);
+        JTextField Question_5 = new JTextField(20);
+        JTextField Answer_5 = new JTextField(20);
+        JTextField Question_6 = new JTextField(20);
+        JTextField Answer_6 = new JTextField(20);
 
         JRadioButton Choice_0_correct = new JRadioButton("Correct");
         JRadioButton Choice_1_correct = new JRadioButton("Correct");
@@ -83,15 +83,22 @@ public class multiple_choice_basic  extends JPanel
         JRadioButton Choice_6_correct = new JRadioButton("Correct");
 
 
+        JLabel buttons = new JLabel(" ");
+        JLabel buttons2 = new JLabel(" ");
+        JLabel buttons3 = new JLabel(" ");
+        JLabel buttons4 = new JLabel(" ");
+        JLabel dummy = new JLabel(" ");
         JLabel dummy1 = new JLabel(" ");
         JLabel dummy2 = new JLabel(" ");
+        JLabel dummy3 = new JLabel(" ");
+
 
         JButton Remove = new JButton("Remove");
         JButton Add_Q_A = new JButton("Add Q&A");
         JButton Clear_Question_Text = new JButton("Clear Question");
         JButton Create_Gift_Code = new JButton("Create Gift Code");
         JButton Clear_Gift_List = new JButton("Clear Gift List");
-        JTextArea Gift_Output_Text = new JTextArea();
+        JTextField Gift_Output_Text = new JTextField(20);
         Question_0.setVisible(true);
 
 
@@ -103,9 +110,9 @@ public class multiple_choice_basic  extends JPanel
         add(Question,"right,sg 2,split 2,span");
         add(Question_Text,"pushx,growx,wrap");
         add(Answer,"right,sg 2,split 2,span");
-        JScrollPane panelPane = new JScrollPane(Q_panel_0);
-        add(panelPane,"pushx,growx,span");
-       // add(Q_panel_0,"pushx,growx,span");
+        //JScrollPane panelPane = new JScrollPane(Q_panel_0);
+       // add(panelPane,"pushx,growx,span");
+        add(Q_panel_0,"pushx,growx,span");
         Q_panel_0.setPreferredSize(new Dimension(0,80));
         Q_panel_0.setBorder(BorderFactory.createTitledBorder(""));
         Q_panel_0.setLayout(new MigLayout("", "[] [] [] []","[] [] [] []"));
@@ -356,7 +363,7 @@ public class multiple_choice_basic  extends JPanel
                 gift_code_output = "::"+Question_Title_Text.getText().toString()+"::"+Question_Text.getText().toString()
                         +"::{ "+blank1+blank2+"\n"+blank3+blank4+"\n"+blank5+blank6+"\n"+blank7+blank8+"\n"+"\n"+blank9
                         +blank10+"\n"+blank11+blank12+"\n"+blank13+blank14+" }";
-                Gift_Output_Text.append(gift_code_output);
+                Gift_Output_Text.setText(gift_code_output);
 
                 Question_Title_Text.setText("");
                 Question_Text.setText("");

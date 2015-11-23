@@ -45,12 +45,12 @@ public class fill_Blanks_Tab  extends JPanel
         JLabel Gift_Output = new JLabel("Gift Output:");
 
         /*panel component creation*/
-        JTextArea Question_Title_Text = new JTextArea();
+        JTextField Question_Title_Text = new JTextField(20);
         JTextArea Question_Start_Text = new JTextArea(5,0);
-        JTextArea Blanks_Choice_0 = new JTextArea();
-        JTextArea Blanks_Choice_1 = new JTextArea();
-        JTextArea Blanks_Choice_2 = new JTextArea();
-        JTextField Blanks_Choice_3 = new JTextField();
+        JTextField Blanks_Choice_0 = new JTextField(20);
+        JTextField Blanks_Choice_1 = new JTextField(20);
+        JTextField Blanks_Choice_2 = new JTextField(20);
+        JTextField Blanks_Choice_3 = new JTextField(20);
         JRadioButton Choice_0_correct = new JRadioButton("Correct");
         JRadioButton Choice_1_correct = new JRadioButton("Correct");
         JRadioButton Choice_2_correct = new JRadioButton("Correct");
@@ -60,8 +60,8 @@ public class fill_Blanks_Tab  extends JPanel
         JButton Clear_Question_Text = new JButton("Clear Question");
         JButton Create_Gift_Code = new JButton("Create Gift Code");
         JButton Clear_Gift_List = new JButton("Clear Gift List");
-        JTextArea Question_End_Text = new JTextArea();
-        JTextArea Gift_Output_Text = new JTextArea();
+        JTextField Question_End_Text = new JTextField(20);
+        JTextField Gift_Output_Text = new JTextField(20);
         Blanks_Choice_0.setVisible(true);
         Choice_0_correct.setVisible(true);
 
@@ -221,7 +221,7 @@ public class fill_Blanks_Tab  extends JPanel
                  gift_code_output = "::"+Question_Title_Text.getText().toString()
                         +"::"+Question_Start_Text.getText().toString()
                         +" {"+blank1+blank2+blank3+blank4+" }"+Question_End_Text.getText().toString();
-                Gift_Output_Text.append("\n"+gift_code_output);
+                Gift_Output_Text.setText(gift_code_output);
 
                 Question_Title_Text.setText("");
                 Question_Start_Text.setText("");
