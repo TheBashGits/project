@@ -156,7 +156,7 @@ public class Numerical extends JPanel
                 total += spin.getValue().toString() + "::";
                 total += spinend.getValue().toString() + "}";
 
-                total += "\n}";
+                total += "\n";
                 Gift_Output_Text.append(total);
 
                 Question_Title_Text.setText("");

@@ -115,7 +115,8 @@ public class Multiple_Choice_Advanced  extends JPanel
 
 
 
-
+        Q_panel_0.add(new JLabel("Answer"), "left,pushx,growx");
+        Q_panel_0.add(new JLabel("Feedback"), "pushx,growx,wrap");
         Q_panel_0.add(Question_0, "left,pushx,growx");
         Q_panel_0.add(Answer_0, "left,sg 1,pushx,growx");
         Q_panel_0.add(Spinner_0,"wrap");
@@ -141,15 +142,15 @@ public class Multiple_Choice_Advanced  extends JPanel
         Q_panel_0.add(Spinner_5,"wrap");
 
         Q_panel_0.add(Question_6,"left,sg 1,pushx,growx");
-        Q_panel_0.add(Answer_6,"left,sg 1,pushx,growx");
+        Q_panel_0.add(Answer_6, "left,sg 1,pushx,growx");
         Q_panel_0.add(Spinner_6, "wrap");
 
 
         Blank_panel_1.setLayout(new MigLayout("", "[]", "[]"));
         Blank_panel_1.setBorder(BorderFactory.createTitledBorder("Remove Selected"));
         Blank_panel_2.setLayout(new MigLayout("", "[grow]", "[] []"));
-        add(dummy1,"left,sg 2,split 2");
-        add(Blank_panel_1,"left,sg 1");
+        add(dummy1, "left,sg 2,split 2");
+        add(Blank_panel_1, "left,sg 1");
         add(Blank_panel_2, "right,sg 1,span");
 
         Question_1.setVisible(false);
