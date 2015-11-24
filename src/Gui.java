@@ -5,6 +5,7 @@ import javax.swing.event.MenuKeyEvent;
 import javax.swing.event.MenuKeyListener;
 import java.awt.*;
 
+//Preperation for megring first tabs
 
 public class Gui extends JPanel {
 
@@ -15,6 +16,7 @@ public class Gui extends JPanel {
     private static String numerical = "Numerical";
     private static String matching = "Matching";
     private static String fillblanks = "Fill Blanks";
+    String test; 
 
 
     private JMenuBar jcomp1;
@@ -83,7 +85,7 @@ public class Gui extends JPanel {
 
 
      //   tabs.addTab(essay, new fill_Blanks_Tab());
-        tabs.addTab(essay, Tab1);
+        tabs.addTab(essay,Tab1);
         tabs.addTab(truefalse, Tab2);
         tabs.addTab(mcb, Tab3);
         tabs.addTab(mca, Tab4);
