@@ -27,7 +27,7 @@ public class matching_tab  extends JPanel
     {
         JFrame frame = new JFrame("Matching");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(new fill_Blanks_Tab());
+        frame.getContentPane().add(new matching_tab());
         frame.pack();
         frame.setVisible(true);
     }

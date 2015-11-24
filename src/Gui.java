@@ -87,11 +87,11 @@ public class Gui extends JPanel {
      //   tabs.addTab(essay, new fill_Blanks_Tab());
         tabs.addTab(essay,new Essays());
         tabs.addTab(truefalse, Tab2);
-        tabs.addTab(mcb, Tab3);
+        tabs.addTab(mcb, new multiple_choice_basic());
         tabs.addTab(mca, new Multiple_Choice_Advanced());
         tabs.addTab(numerical, new Numerical());
-        tabs.addTab(matching, Tab6);
-        tabs.addTab(fillblanks, Tab7);
+        tabs.addTab(matching, new matching_tab());
+        tabs.addTab(fillblanks, new fill_Blanks_Tab());
 
         //construct components
         jcomp1 = new JMenuBar();
