@@ -316,7 +316,7 @@ public class multiple_choice_basic  extends JPanel
                     if(Choice_0_correct.isSelected())
                     blank1="="+Question_0.getText().toString();
                     else
-                        blank1="="+Question_0.getText().toString();
+                        blank1="~"+Question_0.getText().toString();
 
                     blank2="#"+Answer_0.getText().toString();
                 }if(Question_1.isVisible()){
