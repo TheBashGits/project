@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Aonghus on 22/11/2015.
+ * Created by Kev on 22/11/2015.
  */
 
 
@@ -354,11 +354,8 @@ public class Multiple_Choice_Advanced  extends JPanel
                     int spi = Integer.parseInt(Spinner_6.getValue().toString());
                     String qs = Question_6.getText().toString();
                     total += "~%" + spi + "%" + qs + "\n";
-                    total += "#" + Answer_6.getText().toString()+"\n";
+                    total += "#" + Answer_6.getText().toString();
                 }
-//                gift_code_output = "::"+Question_Title_Text.getText().toString()+"::"+Question_Text.getText().toString()
-//                        +"::{ "+blank1+blank2+"\n"+blank3+blank4+"\n"+blank5+blank6+"\n"+blank7+blank8+"\n"+"\n"+blank9
-//                        +blank10+"\n"+blank11+blank12+"\n"+blank13+blank14+" }";
                 total+="\n}";
                 Gift_Output_Text.append(total);
 
