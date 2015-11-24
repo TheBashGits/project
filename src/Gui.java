@@ -16,7 +16,7 @@ public class Gui extends JPanel {
     private static String numerical = "Numerical";
     private static String matching = "Matching";
     private static String fillblanks = "Fill Blanks";
-    String test; 
+    String test;
 
 
     private JMenuBar jcomp1;
