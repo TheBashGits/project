@@ -4,8 +4,10 @@ import javax.swing.*;
 import javax.swing.event.MenuKeyEvent;
 import javax.swing.event.MenuKeyListener;
 import java.awt.*;
-
-//Preperation for megring first tabs
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Gui extends JPanel {
 
@@ -16,18 +18,15 @@ public class Gui extends JPanel {
     private static String numerical = "Numerical";
     private static String matching = "Matching";
     private static String fillblanks = "Fill Blanks";
-    String test;
 
 
     private JMenuBar jcomp1;
 
     public Gui() {
         //construct components
-       setPreferredSize (new Dimension (2000, 2000));
-      //  setLayout (null);
         JTabbedPane tabs = new JTabbedPane();
-
-        setLayout(new MigLayout());
+        //Setting layout to Mig Layout
+        setLayout(new MigLayout("", "[]","[] []"));
 
         //construct preComponents of File menu
         JMenu fileMenu = new JMenu ("File");
@@ -39,52 +38,62 @@ public class Gui extends JPanel {
         JMenuItem q6 = new JMenuItem (matching);
         JMenuItem q7 = new JMenuItem (fillblanks);
 
-
-        q1.addMenuKeyListener(new MenuKeyListener() {
+        //Action listiner for each menu bar
+       q1.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               tabs.setSelectedIndex(0);
+           }
+       });
+        q2.addActionListener(new ActionListener() {
             @Override
-            public void menuKeyTyped(MenuKeyEvent e) {
-
-            }
-
-            @Override
-            public void menuKeyPressed(MenuKeyEvent e) {
-
-            }
-
-            @Override
-            public void menuKeyReleased(MenuKeyEvent e) {
-
+            public void actionPerformed(ActionEvent e) {
+                tabs.setSelectedIndex(1);
             }
         });
+        q3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tabs.setSelectedIndex(2);
+            }
+        });
+        q4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tabs.setSelectedIndex(3);
+            }
+        });
+        q5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tabs.setSelectedIndex(4);
+            }
+        });
+        q6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tabs.setSelectedIndex(5);
+            }
+        });
+        q7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tabs.setSelectedIndex(6);
+            }
+        });
+
+
 
         //Adding components into File Menu
         fileMenu.add (q1);
         fileMenu.add (q2);
         fileMenu.add (q3);
-        fileMenu.add (q4);
-        fileMenu.add (q5);
-        fileMenu.add (q6);
-        fileMenu.add (q7);
+        fileMenu.add(q4);
+        fileMenu.add(q5);
+        fileMenu.add(q6);
+        fileMenu.add(q7);
 
-        //Creating Tabs for files
-        JPanel Tab1 = new JPanel();
-        JPanel Tab2 = new JPanel();
-        JPanel Tab3 = new JPanel();
-        JPanel Tab4 = new JPanel();
-        JPanel Tab5 = new JPanel();
-        JPanel Tab6 = new JPanel();
-        JPanel Tab7 = new JPanel();
-        //Setting test collors code
-        Tab1.setBackground(Color.black);
-        Tab2.setBackground(Color.blue);
-        Tab3.setBackground(Color.yellow);
-        Tab4.setBackground(Color.CYAN);
-        Tab5.setBackground(Color.red);
-        Tab6.setBackground(Color.green);
-        Tab7.setBackground(Color.pink);
-
-
-     //   tabs.addTab(essay, new fill_Blanks_Tab());
+        //tabs.addTab(essay, new fill_Blanks_Tab());
         tabs.addTab(essay,new Essays());
         tabs.addTab(truefalse, new true_false());
         tabs.addTab(mcb, new multiple_choice_basic());
@@ -96,19 +105,28 @@ public class Gui extends JPanel {
         //construct components
         jcomp1 = new JMenuBar();
         jcomp1.add(fileMenu);
-
-        add(jcomp1," grow,wrap");
+        //Adding components to panel
+        add(jcomp1," growx,wrap,top");
         add(tabs,"grow,push");
     }
 
 
-    public static void main (String[] args) {
 
+
+
+
+
+
+    public static void main (String[] args) {
+        try{
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
         JFrame frame = new JFrame ("MyPanel");
-        frame.setLayout(new MigLayout());
+        frame.setLayout(new MigLayout("", "[] "));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(new Gui(), "span");
-        frame.setPreferredSize(new Dimension(800,700));
+        frame.getContentPane().add(new Gui(), "push,grow ");
         frame.pack();
         frame.setVisible (true);
     }

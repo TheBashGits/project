@@ -104,13 +104,17 @@ public class multiple_choice_basic  extends JPanel
         add(Question_Text,"pushx,growx,wrap");
         add(Answer,"right,sg 2,split 2,span");
         JScrollPane panelPane = new JScrollPane(Q_panel_0);
-        panelPane.setPreferredSize(new Dimension(0,80));
+        panelPane.setPreferredSize(new Dimension(0, 80));
         panelPane.setVerticalScrollBarPolicy(panelPane.VERTICAL_SCROLLBAR_ALWAYS);
-        add(panelPane,"pushx,growx");
+        add(panelPane, "pushx,growx");
 
-        Q_panel_0.setPreferredSize(new Dimension(0,250));
+        Q_panel_0.setPreferredSize(new Dimension(0, 250));
         Q_panel_0.setBorder(BorderFactory.createTitledBorder(""));
-        Q_panel_0.setLayout(new MigLayout("", "[] [] [] []","[] [] [] []"));
+        Q_panel_0.setLayout(new MigLayout("", "[] [] [] []", "[] [] [] []"));
+
+
+        Q_panel_0.add(new JLabel("Answer"), "left,pushx,growx");
+        Q_panel_0.add(new JLabel("Feedback"), "pushx,growx,wrap");
 
         Q_panel_0.add(Question_0, "left,pushx,growx");
         Q_panel_0.add(Answer_0, "left,sg 1,pushx,growx");
